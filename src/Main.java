@@ -1,3 +1,5 @@
+import Core_Basics.CoreBasics;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -11,5 +13,14 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        // calling to CoreBasics class and its features.
+        CoreBasics coreBasicsObj = new CoreBasics(1L, "Muhammad Ali", "Farhan Ali");
+        //playing with fields of this class.
+        Long empId;
+        empId = coreBasicsObj.getEmpId();
+        System.out.println("Employee Id Now : " + empId);
+        empId = coreBasicsObj.setEmpId(20L);
+        System.out.println("Employee Id after update/set : " + empId);
     }
 }
