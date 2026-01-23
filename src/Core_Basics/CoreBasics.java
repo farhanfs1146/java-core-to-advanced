@@ -41,6 +41,4 @@ public class CoreBasics {
        return this.empId;
     }
 
-
-
 }
