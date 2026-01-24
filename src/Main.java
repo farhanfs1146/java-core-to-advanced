@@ -1,4 +1,6 @@
 import Core_Basics.CoreBasics;
+import Core_Basics.InheritanceLearning2;
+import Core_Basics.InheritanceLearning3;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -22,5 +24,21 @@ public class Main {
         System.out.println("Employee Id Now : " + empId);
         empId = coreBasicsObj.setEmpId(20L);
         System.out.println("Employee Id after update/set : " + empId);
+
+        // inheritance concept now.
+        InheritanceLearning2 inheritanceLearning2Obj = new InheritanceLearning2("Ali", 4L, 55000.0, 2L, 13411L);
+        Double empSalary = inheritanceLearning2Obj.getEmpSalary();
+        System.out.println("Emp salary now before increment : " + empSalary);
+
+        inheritanceLearning2Obj.setEmpSalary(empSalary + (55000 * 10 / 100));
+        Double empSalaryNow = inheritanceLearning2Obj.getEmpSalary();
+        System.out.println("Emp salary now after increment : " + empSalaryNow + " of emp card no. " + inheritanceLearning2Obj.getEmpCardNo());
+
+        // inheritance further concept.
+        InheritanceLearning3 inheritanceLearning3Obj = new InheritanceLearning3("Farhan Ali", 5L, 550000.0, 2L, 13411L, true, "very good & excellent character");
+        Double empSalary3 = inheritanceLearning3Obj.getEmpSalary();
+        System.out.println("Emp salary3 now before increment : " + empSalary3);
+
+
     }
 }
