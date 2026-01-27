@@ -3,6 +3,8 @@ import Core_Basics.OOP.CoreBasics;
 import Core_Basics.OOP.InheritanceLearning2;
 import Core_Basics.OOP.InheritanceLearning3;
 
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -44,7 +46,11 @@ public class Main {
         UserImplementation userImplementationsObj = new UserImplementation();
         userImplementationsObj.displayUserName();
         userImplementationsObj.getUserId();
-        userImplementationsObj.setUserName();
+        String userName;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter new username : ");
+        userName = scanner.nextLine();
+        userImplementationsObj.setUserName(userName);
         userImplementationsObj.displayUserName();
 
 
