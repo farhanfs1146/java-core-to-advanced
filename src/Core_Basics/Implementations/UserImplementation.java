@@ -1,16 +1,17 @@
 package Core_Basics.Implementations;
 
 import Core_Basics.Interfaces.Employee;
+import Core_Basics.Interfaces.EmployeeInfo;
 import Core_Basics.Interfaces.User;
 
 import java.util.Scanner;
 
 // interfaces resolve the issue in Java like Multiple-Inheritance.
 // instead of creating classes use implements multiple interfaces.
-public class UserImplementation implements User, Employee {
+public class UserImplementation implements User, Employee, EmployeeInfo {
 
     private static String userNameFixed = "Farhan Ali";;
-    private static int counter;
+    private static int counter = 0;
 
     @Override
     public void displayUserName(){
@@ -27,12 +28,7 @@ public class UserImplementation implements User, Employee {
     }
 
     @Override
-    public void setUserName() {
-
-        String userName;
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter new username : ");
-        userName = scanner.nextLine();
+    public void setUserName(String userName) {
 
         if (userName.length() <= 6) {
             userNameFixed = userName;
@@ -52,6 +48,16 @@ public class UserImplementation implements User, Employee {
 
     @Override
     public void getEmployeeCardNumber() {
+
+    }
+
+    @Override
+    public void setEmployeeName() {
+
+    }
+
+    @Override
+    public void setEmployeeCardNo() {
 
     }
 }
