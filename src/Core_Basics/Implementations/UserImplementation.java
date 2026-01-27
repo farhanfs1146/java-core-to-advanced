@@ -9,13 +9,12 @@ import java.util.Scanner;
 // instead of creating classes use implements multiple interfaces.
 public class UserImplementation implements User, Employee {
 
-    private static String userNameFixed;
+    private static String userNameFixed = "Farhan Ali";;
     private static int counter;
 
     @Override
     public void displayUserName(){
 
-        userNameFixed = "Farhan Ali";
         counter++;
         System.out.println("Latest username is : " + userNameFixed);
     }
@@ -28,18 +27,23 @@ public class UserImplementation implements User, Employee {
     }
 
     @Override
-    public void setUserName(String userName) {
+    public void setUserName() {
 
-        if (userName.length() < 6){
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter new username : ");
-            userName = scanner.nextLine();
+        String userName;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter new username : ");
+        userName = scanner.nextLine();
+
+        if (userName.length() <= 6) {
+            userNameFixed = userName;
+            counter++;
+            System.out.println("New username updated with : "
+                    + userNameFixed + " with counter : " + counter);
+        } else {
+            System.out.println("Try with valid username (max 6 characters)");
         }
-
-        userNameFixed = userName;
-        counter++;
-        System.out.println("New username updated with : " + userNameFixed + " with counter : " + counter);
     }
+
 
     @Override
     public void employeeCardNumberAssigning() {

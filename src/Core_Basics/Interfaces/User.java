@@ -4,6 +4,5 @@ public interface User {
 
     public void displayUserName();
     public void getUserId();
-
-    public void setUserName(String userName);
+    public void setUserName();
 }
