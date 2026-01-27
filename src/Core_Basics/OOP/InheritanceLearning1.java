@@ -1,4 +1,4 @@
-package Core_Basics;
+package Core_Basics.OOP;
 
 public class InheritanceLearning1 {
 

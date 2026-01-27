@@ -1,6 +1,7 @@
-import Core_Basics.CoreBasics;
-import Core_Basics.InheritanceLearning2;
-import Core_Basics.InheritanceLearning3;
+import Core_Basics.Implementations.UserImplementation;
+import Core_Basics.OOP.CoreBasics;
+import Core_Basics.OOP.InheritanceLearning2;
+import Core_Basics.OOP.InheritanceLearning3;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -38,6 +39,13 @@ public class Main {
         InheritanceLearning3 inheritanceLearning3Obj = new InheritanceLearning3("Farhan Ali", 5L, 550000.0, 2L, 13411L, true, "very good & excellent character");
         Double empSalary3 = inheritanceLearning3Obj.getEmpSalary();
         System.out.println("Emp salary3 now before increment : " + empSalary3);
+
+        // Using Implemented class which is using Interfaces.
+        UserImplementation userImplementationsObj = new UserImplementation();
+        userImplementationsObj.displayUserName();
+        userImplementationsObj.getUserId();
+        userImplementationsObj.setUserName("");
+        userImplementationsObj.displayUserName();
 
 
     }
