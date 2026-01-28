@@ -40,7 +40,6 @@ public class UserImplementation implements User, Employee, EmployeeInfo {
         }
     }
 
-
     @Override
     public void employeeCardNumberAssigning() {
         
